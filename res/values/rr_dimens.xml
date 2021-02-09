@@ -214,4 +214,11 @@
     <dimen name="ga_gesture_thumbnail_inset">8dip</dimen>
     <dimen name="ga_gesture_thumbnail_size">64dip</dimen>
 
+    <!-- Like Octavi -->
+    <dimen name="stylish_contorl_text_size_body1">12.399994sp</dimen>
+    <dimen name="stylish_contorl_text_size_subtitle">11.399994sp</dimen>
+    <item type="dimen" name="stylish_contorl_row_space_1">1.03</item>
+    <item type="dimen" name="stylish_contorl_letter_space_body1">0.0</item>
+    <item type="dimen" name="stylish_contorl_letter_space_subtitle">0.0</item>
+
 </resources>

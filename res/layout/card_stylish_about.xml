@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/header" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" app:layout_constraintTop_toTopOf="parent">
+        <View android:background="@drawable/bar" android:layout_width="2.5dip" android:layout_height="fill_parent" android:layout_marginStart="10.0dip" />
+        <TextView android:textSize="18.0sp" android:textColor="?android:colorAccent" android:id="@+id/androidVer" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip" android:text="@string/rr_info_summary" android:layout_marginStart="12.0dip" style="@style/stylish_contorl_text_style_body1" />
+        <TextView android:textSize="18.0sp" android:id="@+id/androidStatus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip" android:text="@string/rom_name" android:layout_marginStart="12.5dip" style="@style/stylish_contorl_text_style_body1" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@+id/miniDetails" android:background="@drawable/rect3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginStart="10.0dip" android:layout_marginEnd="10.0dip" app:layout_constraintTop_toBottomOf="@+id/header">
+        <androidx.constraintlayout.widget.ConstraintLayout android:orientation="vertical" android:padding="20.0dip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="0.6">
+            <ImageView android:id="@+id/display" android:layout_width="24.0dip" android:layout_height="24.0dip" android:src="@drawable/display_about" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+            <TextView android:id="@+id/screen_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/display_message" app:layout_constraintBottom_toTopOf="@+id/divider" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/display" style="@style/stylish_contorl_text_style_body1" />
+            <View android:id="@+id/divider" android:background="@drawable/bar2" android:layout_width="28.0dip" android:layout_height="2.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+            <ImageView android:id="@+id/cpu" android:layout_width="22.0dip" android:layout_height="22.0dip" android:layout_marginTop="3.0dip" android:src="@drawable/soc_about" android:layout_marginStart="1.0dip" app:layout_constraintBottom_toTopOf="@+id/cpu_title" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/divider" />
+            <TextView android:id="@+id/cpu_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/cpu_message" android:translationY="2.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" style="@style/stylish_contorl_text_style_body1" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageView android:id="@+id/violet" android:layout_width="0.0dip" android:layout_height="160.0dip" android:layout_marginTop="20.0dip" android:layout_marginBottom="-0.5dip" android:src="@drawable/violet" android:layout_weight="0.4" android:layout_marginEnd="10.0dip" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@+id/finalDetail" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:baselineAligned="false" android:layout_marginStart="10.0dip" android:layout_marginEnd="10.0dip" app:layout_constraintTop_toBottomOf="@+id/miniDetails">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@+id/leftFinalDetail" android:background="@drawable/rect3" android:padding="10.0dip" android:layout_width="0.0dip" android:layout_height="125.0dip" android:layout_weight="0.5" android:layout_marginEnd="10.0dip">
+            <ImageView android:layout_width="24.0dip" android:layout_height="24.0dip" android:src="@drawable/battery_about" />
+            <TextView android:id="@+id/battery_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/battery_message" style="@style/stylish_contorl_text_style_body1" />
+            <View android:background="@drawable/bar2" android:layout_width="28.0dip" android:layout_height="2.0dip" android:layout_margin="6.0dip" />
+            <ImageView android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginTop="2.5dip" android:layout_marginBottom="2.5dip" android:src="@drawable/cam_about" />
+            <TextView android:id="@+id/camera_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/camera_message" style="@style/stylish_contorl_text_style_body1" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@+id/righFinalDetail" android:background="@drawable/rect3" android:padding="10.0dip" android:layout_width="0.0dip" android:layout_height="125.0dip" android:layout_weight="0.5" android:layout_marginStart="10.0dip">
+            <ImageView android:layout_width="22.0dip" android:layout_height="22.0dip" android:layout_marginBottom="2.0dip" android:src="@drawable/cpu_about" />
+            <TextView android:id="@+id/soc_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/soc_message" android:singleLine="true" style="@style/stylish_contorl_text_style_body1" />
+            <View android:background="@drawable/bar2" android:layout_width="28.0dip" android:layout_height="2.0dip" android:layout_margin="6.0dip" />
+            <ImageView android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginTop="2.5dip" android:layout_marginBottom="2.5dip" android:src="@drawable/ram_about" />
+            <TextView android:textSize="13.0sp" android:id="@+id/rom_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/rom_message" style="@style/stylish_contorl_text_style_body1" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
