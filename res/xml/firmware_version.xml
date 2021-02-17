@@ -22,16 +22,19 @@
     android:title="@string/firmware_version"
     settings:keywords="@string/keywords_android_version">
 
-    <com.android.settings.rr.preview.AboutSettingsPreview
-        android:key="about_rom"
-        android:layout="@layout/about_layout"
-        android:selectable="false"/>
+<PreferenceScreen
+    android:layout="@layout/card_stylish_about"
+    android:selectable="false"/>
+
+<Preference
+    android:layout="@layout/divider" />
 
     <!-- Android version -->
     <Preference
         android:key="os_firmware_version"
         android:title="@string/firmware_version"
         android:icon="@drawable/rr_fw_version_icon"
+        android:layout="@layout/card_view_pref_top"
         android:summary="@string/summary_placeholder"
         settings:enableCopying="true"
         settings:controller="com.android.settings.deviceinfo.firmwareversion.FirmwareVersionDetailPreferenceController"/>
@@ -41,6 +44,7 @@
         android:key="rr_version"
         android:title="@string/rr_version_info"
         android:icon="@drawable/rr_main_conf_icon"
+        android:layout="@layout/card_view_pref_middle"
         android:summary="@string/summary_placeholder"
         settings:enableCopying="true"
         settings:controller="com.android.settings.deviceinfo.firmwareversion.RRVersionDetailPreferenceController"/>
@@ -50,6 +54,7 @@
         android:key="rr_build_type"
         android:title="@string/rr_build_type"
         android:icon="@drawable/rr_build_info_icon"
+        android:layout="@layout/card_view_pref_middle"
         android:summary="@string/summary_placeholder"
         settings:enableCopying="true"
         settings:controller="com.android.settings.deviceinfo.firmwareversion.rrBuildVersionDialogController"/>
@@ -59,13 +64,18 @@
         android:key="security_key"
         android:title="@string/security_patch"
         android:icon="@drawable/rr_security_version_icon"
+        android:layout="@layout/card_view_pref_bottom"
         settings:enableCopying="true"
         settings:controller="com.android.settings.deviceinfo.firmwareversion.SecurityPatchLevelPreferenceController"/>
+
+<Preference
+    android:layout="@layout/divider" />
 
     <!-- Vendor security patch -->
     <Preference
         android:key="vendor_security_key"
         android:icon="@drawable/rr_vendor_icon"
+        android:layout="@layout/card_view_pref_top"
         android:title="@*lineageos.platform:string/lineage_vendor_security_patch"
         settings:enableCopying="true"
         settings:controller="com.android.settings.deviceinfo.firmwareversion.LineageVendorSecurityPatchLevelPreferenceController"/>
@@ -74,6 +84,7 @@
     <Preference
         android:key="module_version"
         android:icon="@drawable/rr_google_play_icon"
+        android:layout="@layout/card_view_pref_middle"
         android:title="@string/module_version"
         android:summary="@string/summary_placeholder"
         settings:enableCopying="true"
@@ -82,16 +93,21 @@
     <!-- Baseband -->
     <Preference
         android:key="base_band"
-       android:icon="@drawable/rr_imei_info_icon"
+        android:icon="@drawable/rr_imei_info_icon"
+        android:layout="@layout/card_view_pref_bottom"
         android:title="@string/baseband_version"
         android:summary="@string/summary_placeholder"
         settings:enableCopying="true"
         settings:controller="com.android.settings.deviceinfo.firmwareversion.BasebandVersionPreferenceController"/>
 
+<Preference
+    android:layout="@layout/divider" />
+
     <!-- Kernel -->
     <Preference
         android:key="kernel_version"
         android:icon="@drawable/rr_kernel_icon"
+        android:layout="@layout/card_view_pref_top"
         android:title="@string/kernel_version"
         android:summary="@string/summary_placeholder"
         settings:enableCopying="true"
@@ -101,6 +117,7 @@
     <Preference
         android:key="os_build_date"
         android:icon="@drawable/rr_clock_icon_version"
+        android:layout="@layout/card_view_pref_middle"
         android:title="@*lineageos.platform:string/build_date"
         android:summary="@string/summary_placeholder"
         settings:enableCopying="true"
@@ -110,6 +127,7 @@
     <Preference
         android:key="os_build_number"
         android:icon="@drawable/rr_text_icon_about"
+        android:layout="@layout/card_view_pref_bottom"
         android:title="@string/build_number"
         android:summary="@string/summary_placeholder"
         settings:enableCopying="true"
